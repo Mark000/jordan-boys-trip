@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jordania poikaporukalla — 8 päivää, omatoimi</title>
+<meta name="description" content="Omatoiminen 8 päivän Jordanian reissu: kanjonitrekit, kamelit, Petran takaovi, Wadi Rum ja Punainenmeri. 55 % seikkailua, 45 % chilliä.">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="Jordania poikaporukalla — 8 päivää, omatoimi">
+<meta property="og:description" content="Kanjonitrekit, kamelit, Petran takaovi, Wadi Rum ja Punainenmeri. Ei pakettimatka.">
+<meta property="og:type" content="website">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#100e0c;color:#f0e7dc;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:#e8b877}
+h1,h2,h3{line-height:1.2;margin:0}
+:root{
+  --sand:#e0a763; --sand-dim:#8a6a44; --ink:#100e0c; --panel:#1a1613;
+  --panel-2:#221c17; --line:#332a22; --muted:#a29383;
+  --water:#5aada6; --rock:#c8724f;
+}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(16,14,12,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1080px;margin:0 auto;display:flex;gap:.15rem;overflow-x:auto;
+  padding:.5rem .75rem;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav a{flex:0 0 auto;color:var(--muted);text-decoration:none;font-size:.8rem;
+  font-weight:600;padding:.4rem .6rem;border-radius:999px;white-space:nowrap;letter-spacing:.01em}
+.nav a:hover,.nav a:focus{color:var(--sand);background:#221c17}
+.nav a.n-home{color:var(--sand)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:min(88vh,720px);display:flex;align-items:flex-end;
+  overflow:hidden;background:#000}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(16,14,12,.55) 0%,rgba(16,14,12,.1) 35%,rgba(16,14,12,.92) 88%)}
+.hero-in{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:2.5rem 1.25rem 2.25rem;width:100%}
+.kicker{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);
+  font-weight:700;margin-bottom:.7rem}
+.hero h1{font-size:clamp(2.1rem,7.5vw,4rem);font-weight:800;letter-spacing:-.02em;
+  text-shadow:0 2px 24px rgba(0,0,0,.6)}
+.hero h1 em{font-style:normal;color:var(--sand)}
+.hero p{max-width:44ch;color:#e2d6c8;margin:.9rem 0 0;font-size:1.02rem}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.4rem}
+.chip{background:rgba(34,28,23,.85);border:1px solid var(--line);color:#e5d9ca;
+  padding:.32rem .7rem;border-radius:999px;font-size:.78rem;font-weight:600}
+.chip b{color:var(--sand);font-weight:700}
+
+/* ---------- layout ---------- */
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+section{padding:3.25rem 0 .5rem}
+.sec-head{margin-bottom:1.5rem}
+.sec-head .kicker{margin-bottom:.4rem}
+.sec-head h2{font-size:clamp(1.5rem,4.2vw,2.1rem);font-weight:800;letter-spacing:-.015em}
+.sec-head p{color:var(--muted);margin:.6rem 0 0;max-width:62ch}
+
+/* ---------- alert ---------- */
+.alert{background:linear-gradient(135deg,#2b1d13,#221913);border:1px solid #7a4a1e;
+  border-left:4px solid var(--sand);border-radius:12px;padding:1.1rem 1.25rem;margin:2rem 0 0}
+.alert h3{font-size:1.05rem;color:var(--sand);margin-bottom:.4rem}
+.alert p{margin:.35rem 0 0;color:#e0d3c4;font-size:.95rem}
+
+/* ---------- balance bar ---------- */
+.balance{margin-top:1.25rem}
+.bar{display:flex;height:12px;border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+.bar i{display:block}
+.bar .b1{width:55%;background:linear-gradient(90deg,var(--rock),#e0894f)}
+.bar .b2{width:45%;background:linear-gradient(90deg,#3f8f8a,var(--water))}
+.bar-key{display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:.6rem;font-size:.82rem;color:var(--muted)}
+.bar-key b{color:#f0e7dc}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:.4rem}
+.dot.d1{background:var(--rock)} .dot.d2{background:var(--water)}
+
+/* ---------- route ---------- */
+.route{display:flex;flex-wrap:wrap;align-items:stretch;gap:.4rem;margin-top:1.25rem}
+.stop{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:.6rem .8rem;flex:1 1 130px;min-width:118px}
+.stop .s-n{font-size:.68rem;color:var(--sand-dim);font-weight:700;letter-spacing:.1em}
+.stop .s-p{font-weight:700;font-size:.92rem;margin-top:.15rem}
+.stop .s-d{font-size:.74rem;color:var(--muted);margin-top:.2rem}
+
+/* ---------- day cards ---------- */
+.day{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  overflow:hidden;margin-bottom:1.5rem;scroll-margin-top:60px}
+.day-fig{position:relative;aspect-ratio:16/8;background:#000}
+.day-fig img{width:100%;height:100%;object-fit:cover}
+.day-fig figcaption{position:absolute;bottom:0;left:0;right:0;padding:1.5rem .9rem .55rem;
+  font-size:.72rem;color:#cdbfae;
+  background:linear-gradient(180deg,transparent,rgba(16,14,12,.9))}
+.day-num{position:absolute;top:.75rem;left:.75rem;background:var(--sand);color:#1a1208;
+  font-weight:800;font-size:.75rem;padding:.28rem .6rem;border-radius:6px;letter-spacing:.04em}
+.day-body{padding:1.25rem 1.15rem 1.4rem}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.7rem}
+.tag{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  padding:.22rem .5rem;border-radius:4px}
+.t-adv{background:rgba(200,114,79,.18);color:#e39468;border:1px solid rgba(200,114,79,.35)}
+.t-chill{background:rgba(90,173,166,.15);color:#79c4bd;border:1px solid rgba(90,173,166,.32)}
+.t-cult{background:rgba(224,167,99,.14);color:var(--sand);border:1px solid rgba(224,167,99,.3)}
+.day h3{font-size:1.28rem;font-weight:800;letter-spacing:-.01em}
+.day-body p{margin:.7rem 0 0;color:#ded2c4;font-size:.97rem}
+.day-body strong{color:#fff}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.1rem;padding-top:.9rem;
+  border-top:1px solid var(--line)}
+.meta span{font-size:.78rem;color:var(--muted);background:var(--panel-2);
+  border:1px solid var(--line);padding:.28rem .6rem;border-radius:6px}
+.meta span b{color:#e8dccd;font-weight:700}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-top:1rem}
+.gal figure{margin:0}
+.gal img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.gal figcaption{font-size:.7rem;color:var(--muted);margin-top:.3rem}
+
+/* ---------- swap table ---------- */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);
+  border-radius:12px;margin-top:1.25rem}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.9rem}
+th,td{text-align:left;padding:.7rem .85rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel-2);color:var(--sand);font-size:.73rem;letter-spacing:.09em;
+  text-transform:uppercase;font-weight:800;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even){background:rgba(34,28,23,.4)}
+td b{color:#fff}
+
+/* ---------- cards grid ---------- */
+.grid{display:grid;gap:.9rem;margin-top:1.25rem}
+@media(min-width:640px){.grid.g2{grid-template-columns:1fr 1fr}
+  .grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.05rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:.95rem;color:var(--sand);font-weight:800}
+.card p{margin:0;font-size:.9rem;color:#d6c9ba}
+.card p+p{margin-top:.5rem}
+.card.img-card{padding:0;overflow:hidden}
+.card.img-card img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.card.img-card .cc{padding:.9rem 1rem 1.05rem}
+
+/* ---------- checklist ---------- */
+.check{list-style:none;padding:0;margin:1.25rem 0 0;display:grid;gap:.5rem}
+.check li{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:.7rem .9rem;font-size:.92rem;display:flex;gap:.7rem;align-items:flex-start;color:#dccfc0}
+.check li::before{content:"☐";color:var(--sand);font-size:1.05rem;line-height:1.3;flex:0 0 auto}
+.check li b{color:#fff}
+
+/* ---------- footer ---------- */
+footer{margin-top:3.5rem;border-top:1px solid var(--line);background:#0b0a09;
+  padding:2.25rem 0 3rem}
+footer .wrap{color:var(--muted);font-size:.82rem}
+footer h4{color:#e8dccd;font-size:.9rem;margin:0 0 .7rem}
+.credits{columns:2;column-gap:1.5rem;font-size:.72rem;line-height:1.55}
+@media(max-width:560px){.credits{columns:1}}
+.credits a{color:#b99a74;text-decoration:none}
+.credits a:hover{text-decoration:underline}
+.disc{margin-top:1.5rem;padding-top:1.1rem;border-top:1px solid var(--line);font-size:.76rem}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sisällys">
+  <div class="nav-in">
+    <a href="#top" class="n-home">Jordania</a>
+    <a href="#kausi">Ajankohta</a>
+    <a href="#reitti">Reitti</a>
+    <a href="#d1">1 Amman</a>
+    <a href="#d2">2 Mujib</a>
+    <a href="#d3">3 Dana</a>
+    <a href="#d4">4 Petra</a>
+    <a href="#d5">5 Takaovi</a>
+    <a href="#d6">6 Wadi Rum</a>
+    <a href="#d7">7 Aqaba</a>
+    <a href="#valikko">Vaihtoehdot</a>
+    <a href="#kaytanto">Käytäntö</a>
+    <a href="#budjetti">Budjetti</a>
+    <a href="#lista">Varauslista</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img src="img/rum-valley.jpg" alt="Satuloituja kameleja punaisella hiekalla Wadi Rumin kalliomuodostelmien edessä">
+  <div class="hero-in">
+    <div class="kicker">8 päivää · 7 yötä · ei pakettimatka</div>
+    <h1>Jordania<br><em>poikaporukalla</em></h1>
+    <p>Kanjonitrekit vedessä, 16 kilometrin laskeutuminen aavikolle, Petra takaovesta, kamelit auringonlaskuun ja yö tähtitaivaan alla ilman telttaa. Vuokra-auto, omat aikataulut, nolla bussilasteja.</p>
+    <div class="chips">
+      <span class="chip"><b>Amman</b> in &amp; out</span>
+      <span class="chip">n. <b>1 000–1 150 €</b> / hlö maassa</span>
+      <span class="chip"><b>55 %</b> seikkailua</span>
+      <span class="chip"><b>45 %</b> chilliä</span>
+      <span class="chip">Paras kausi: <b>loka</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section id="kausi">
+  <div class="alert">
+    <h3>⚠️ Lue tämä ennen kuin varaat lennot</h3>
+    <p>Heinä–elokuussa Wadi Rum ja Aqaba ovat <strong>40–45 °C</strong>. Trekkaaminen on silloin käytännössä mahdotonta ja koko tämän suunnitelman idea kaatuu.</p>
+    <p><strong>Paras ikkuna on loka–marraskuu tai maalis–toukokuu.</strong> Erityisesti <strong>lokakuu</strong> osuu nappiin: Wadi Mujibin vesireitit ovat auki noin 31.10. asti, päivät ovat 25–30 °C ja yöt aavikolla siedettävät. Koko sivu on kirjoitettu lokakuun oletuksella.</p>
+  </div>
+
+  <div class="balance">
+    <div class="bar"><i class="b1"></i><i class="b2"></i></div>
+    <div class="bar-key">
+      <span><i class="dot d1"></i><b>Seikkailu</b> — kanjonit, trekit, kalliokiipeily, kamelit</span>
+      <span><i class="dot d2"></i><b>Chill</b> — Kuollutmeri, kynttiläkylä, tähtiyö, Punainenmeri</span>
+    </div>
+  </div>
+</section>
+
+<section id="reitti">
+  <div class="sec-head">
+    <div class="kicker">Runko</div>
+    <h2>Reitti etelään, lento takaisin</h2>
+    <p>Lennot Ammaniin ja Ammanista — halvin ja eniten vuoroja. Auto noudetaan ja palautetaan Ammaniin, viimeinen siirtymä Aqabasta lennetään (45 min) tai ajetaan Desert Highwaytä (4 h).</p>
+  </div>
+  <div class="route">
+    <div class="stop"><div class="s-n">YÖ 1</div><div class="s-p">Amman</div><div class="s-d">saapuminen</div></div>
+    <div class="stop"><div class="s-n">YÖ 2</div><div class="s-p">Kuollutmeri</div><div class="s-d">1 h ajoa</div></div>
+    <div class="stop"><div class="s-n">YÖ 3</div><div class="s-p">Feynan</div><div class="s-d">2,5 h + trekki</div></div>
+    <div class="stop"><div class="s-n">YÖ 4</div><div class="s-p">Petra</div><div class="s-d">1,5 h ajoa</div></div>
+    <div class="stop"><div class="s-n">YÖ 5–6</div><div class="s-p">Wadi Rum</div><div class="s-d">1,5 h ajoa</div></div>
+    <div class="stop"><div class="s-n">YÖ 7</div><div class="s-p">Aqaba</div><div class="s-d">1 h ajoa</div></div>
+  </div>
+</section>
+
+<section id="paivat">
+  <div class="sec-head">
+    <div class="kicker">Päivä päivältä</div>
+    <h2>Ohjelma</h2>
+  </div>
+
+  <!-- DAY 1 -->
+  <article class="day" id="d1">
+    <figure class="day-fig">
+      <span class="day-num">PÄIVÄ 1</span>
+      <img src="img/amman-theatre.jpg" loading="lazy" alt="Ammanin roomalainen teatteri ja kaupungin talot rinteillä sen takana">
+      <figcaption>Roomalainen teatteri keskellä Ammanin downtownia — kaikki illan syömäpaikat ovat kävelymatkan päässä.</figcaption>
+    </figure>
+    <div class="day-body">
+      <div class="tags"><span class="tag t-cult">Kulttuuri</span><span class="tag t-chill">Chill</span></div>
+      <h3>Amman: laskeudutaan syömällä</h3>
+      <p>Ei nähtävyyksien pakkopullaa. Downtownin syömäkierros: <strong>Hashem</strong> (falafel kujalla, jonossa taksikuskit ja kuninkaalliset), <strong>Habibah</strong> kunafa jälkiruoaksi, sitten shisha kattoterassilla Rainbow Streetillä.</p>
+      <p>Illan päätteeksi vanha <strong>hammam</strong> — höyryä, kylmä allas ja hieronta. Yllättävän hyvä avaus poikaporukalle ja tekee ihmeitä lentopäivän jälkeen.</p>
+      <p>Osta <strong>duty free lentokentältä saapuessa</strong>. Se on käytännössä viimeinen kunnon viinakauppa ennen Aqabaa — Feynan on alkoholiton ja aavikolla myydään teetä.</p>
+      <div class="meta"><span><b>Yö:</b> Amman, downtown</span><span><b>Ajoa:</b> lentokentältä 40 min</span></div>
+    </div>
+  </article>
+
+  <!-- DAY 2 -->
+  <article class="day" id="d2">
+    <figure class="day-fig">
+      <span class="day-num">PÄIVÄ 2</span>
+      <img src="img/mujib-water.jpg" loading="lazy" alt="Kirkasta vettä kapean, korkeaseinäisen hiekkakivikanjonin pohjalla Wadi Mujibissa">
+      <figcaption>Wadi Mujibin kanjoni. Reitti kulkee ylöspäin <em>joessa</em> — ei joen vartta pitkin.</figcaption>
+    </figure>
+    <div class="day-body">
+      <div class="tags"><span class="tag t-adv">Seikkailu</span><span class="tag t-chill">Chill</span></div>
+      <h3>Wadi Mujib aamulla, Kuollutmeri iltapäivällä</h3>
+      <p>Ylös 6:30 ja aja 1,5 h Mujibiin. Ole portilla kun se avaa: <strong>Siq Trail</strong> on omatoiminen — ei opasta, ei varauksia. Kahlaat ja kiipeät ylöspäin kanjonijoessa, köysien ja tikkaiden avulla vesiputousten ohi. Kesto 2–3 h, pääsymaksu n. 21 JOD (ei kuulu Jordan Passiin). Kelluntaliivi ja kypärä tulevat portilta. Kaikki kastuu — jätä puhelin autoon tai osta vesitiivis pussi.</p>
+      <p>Iltapäivällä alas maailman alimpaan paikkaan: <strong>kellunta ja mutakylvyt</strong> Kuolleellamerellä. Sen jälkeen <strong>Ma'inin kuumat lähteet</strong> tien varrella — kiehuva vesiputous, jonka alla seistään kuin luonnon suihkussa.</p>
+      <div class="gal">
+        <figure><img src="img/mujib-wade.jpg" loading="lazy" alt="Vaeltajia kelluntaliiveissä kahlaamassa kirkkaassa vihertävässä vedessä kanjonin pohjalla"><figcaption>Suurin osa reitistä on kahlaamista — uintia vain paikoin.</figcaption></figure>
+        <figure><img src="img/deadsea-2.jpg" loading="lazy" alt="Kuolleenmeren Jordanian puoleinen ranta: tyyni sininen vesi ja suolan valkaisemat kalliot"><figcaption>Kuolleenmeren Jordanian puoleinen ranta.</figcaption></figure>
+      </div>
+      <div class="meta">
+        <span><b>Yö:</b> Mujib Chalets, mökit suoraan rannalla</span>
+        <span><b>Ajoa:</b> n. 2 h yhteensä</span>
+        <span><b>Huom:</b> vesireitit auki 1.4.–31.10.</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 3 -->
+  <article class="day" id="d3">
+    <figure class="day-fig">
+      <span class="day-num">PÄIVÄ 3</span>
+      <img src="img/dana-valley.jpg" loading="lazy" alt="Dana–Feynan-reitin laakso: punaruskeat vuorenrinteet ja vihreitä pensaita kuivassa uomassa">
+      <figcaption>Dana–Feynan-reitti laskeutuu vuoristokylästä aavikolle — Jordan Trailin hienoimpia osuuksia.</figcaption>
+    </figure>
+    <div class="day-body">
+      <div class="tags"><span class="tag t-adv">Seikkailu</span><span class="tag t-chill">Chill</span></div>
+      <h3>Trekki: Dana → Feynan, 16 km alamäkeä</h3>
+      <p>Aamulla King's Highway etelään. Jätä auto <strong>Dana Guest Houselle</strong> ja lähde jalkaisin: reitti laskeutuu <strong>n. 16 km ja 1 200 metriä</strong> biosfäärialueen läpi Danan kivikylästä aavikon reunalle. Polku on selvä, joten pärjää ilman opasta — mutta beduiiniopas kannattaa jos haluat tietää mitä kaikkea kasvien kanssa voi tehdä.</p>
+      <p>Perillä <strong>Feynan Ecolodge</strong>: ei sähköä huoneissa, satoja kynttilöitä, katolla kaukoputki ja tähtiä esittelevä paikallinen, kupariajan kaivoskäytävät kävelymatkan päässä. Illallinen on kasvisruokaa, alkoholia ei ole eikä sitä saa tuoda. Tämä on reissun ainutlaatuisin yö — varaa 2–3 kk etuajassa.</p>
+      <div class="gal">
+        <figure><img src="img/dana-trail.jpg" loading="lazy" alt="Kivinen polku nousee kohti vuoren huippua Danan luonnonsuojelualueella"><figcaption>Polkua ei ole rakennettu — se on kuljettu.</figcaption></figure>
+        <figure><img src="img/deadsea-1.jpg" loading="lazy" alt="Kuolleenmeren rannan suolakristallikerros turkoosin veden rajassa"><figcaption>Aamun lähtöpaikka: suolakerrostumat rannassa.</figcaption></figure>
+      </div>
+      <div class="meta">
+        <span><b>Yö:</b> Feynan Ecolodge</span>
+        <span><b>Ajoa:</b> 2,5 h + trekki 5–6 h</span>
+        <span><b>Auto:</b> jää Danaan, haetaan seuraavana aamuna</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 4 -->
+  <article class="day" id="d4">
+    <figure class="day-fig">
+      <span class="day-num">PÄIVÄ 4</span>
+      <img src="img/petra-above.jpg" loading="lazy" alt="Petran Aarrekammio kuvattuna suoraan ylhäältä kalliokielekkeeltä">
+      <figcaption>Al-Khubthan kielekkeeltä katsot Aarrekammiota ylhäältä — ilman väkijoukkoa alhaalla.</figcaption>
+    </figure>
+    <div class="day-body">
+      <div class="tags"><span class="tag t-cult">Kulttuuri</span><span class="tag t-adv">Seikkailu</span></div>
+      <h3>Petra ylhäältä, ja kynttilät Siqissä</h3>
+      <p>4×4-shuttle ulos Feynanista, auto haetaan Danasta ja ajetaan Petraan. Iltapäivällä <strong>Al-Khubtha trail</strong>: jyrkkä porrasnousu Aarrekammion yläpuoliselle kielekkeelle, jossa beduiini myy teetä ja alla oleva turistivirta näyttää muurahaisilta. Paras yksittäinen näkymä Petrassa, ja 90 % kävijöistä ei koskaan nouse sinne.</p>
+      <p>Illalla <strong>Petra by Night</strong> — Siq valaistaan 1 500 kynttilällä. Järjestetään yleensä ma / ke / to noin 20:30; tarkista päivät paikan päällä, ne muuttuvat.</p>
+      <div class="meta">
+        <span><b>Yö:</b> Wadi Musa (Petran kylä)</span>
+        <span><b>Ajoa:</b> 1,5 h</span>
+        <span><b>Liput:</b> Jordan Pass kattaa Petran</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 5 -->
+  <article class="day" id="d5">
+    <figure class="day-fig">
+      <span class="day-num">PÄIVÄ 5</span>
+      <img src="img/petra-deir.jpg" loading="lazy" alt="Ad-Deir eli Petran Luostari: kalliosta veistetty valtava pylväsjulkisivu, ihmiset pieninä sen edessä">
+      <figcaption>Ad-Deir, Luostari. Takaovireitiltä tulet tänne ylhäältä — et alhaalta portaita pitkin.</figcaption>
+    </figure>
+    <div class="day-body">
+      <div class="tags"><span class="tag t-adv">Seikkailu</span><span class="tag t-cult">Kulttuuri</span></div>
+      <h3>Petran takaovi — koko päivä omin jaloin</h3>
+      <p>Tämä on päivä, jota muistellaan. Aja <strong>Little Petraan</strong> ja lähde beduiinireitille vuorten yli. Reitti nousee kallioportaita, kiertää selänteitä ja pudottaa sinut <strong>Ad-Deirille takaapäin</strong> — ei portteja, ei lipuntarkastusta, ei bussilasteja. Sen jälkeen laskeudut koko Petran läpi: Luostari, keskuskaupunki, kuninkaanhaudat, Aarrekammio, ja ulos Siqin kautta.</p>
+      <p>Yhteensä 12–14 km. Opas kannattaa (n. 30–50 JOD / porukka) — reitti haarautuu eikä ole viitoitettu, ja se on osa hupia. Iltapäivällä aja Wadi Rumiin, ilmoittaudu kyläportilla ja beduiini vie sinut leiriin. Illallinen on <strong>zarb</strong>: lammas ja juurekset kaivetaan hiekkaan kuumien kivien kanssa.</p>
+      <div class="gal">
+        <figure><img src="img/petra-siq.jpg" loading="lazy" alt="Kävijöitä Petran Siqissä, kymmeniä metrejä korkeiden kanjoniseinien välissä"><figcaption>Siq — kulje se <em>ulospäin</em>, vastavirtaan.</figcaption></figure>
+        <figure><img src="img/camel-bedouin.jpg" loading="lazy" alt="Nuori mies ratsastaa satuloidulla kamelilla Wadi Rumin punaisella hiekalla"><figcaption>Wadi Rum ottaa vastaan.</figcaption></figure>
+      </div>
+      <div class="meta"><span><b>Yö:</b> beduiinileiri, Wadi Rum</span><span><b>Ajoa:</b> 1,5 h illalla</span><span><b>Kesto:</b> pitkä päivä — aloita aikaisin</span></div>
+    </div>
+  </article>
+
+  <!-- DAY 6 -->
+  <article class="day" id="d6">
+    <figure class="day-fig">
+      <span class="day-num">PÄIVÄ 6</span>
+      <img src="img/rum-burdah.jpg" loading="lazy" alt="Burdahin luonnon kivisilta kaartuu kahden kalliojyrkänteen välissä, sillalla seisoo pieni hahmo">
+      <figcaption>Burdahin kivisilta. Ylös mennään kädet ja jalat käyttäen, beduiini edellä.</figcaption>
+    </figure>
+    <div class="day-body">
+      <div class="tags"><span class="tag t-adv">Seikkailu</span><span class="tag t-chill">Chill</span></div>
+      <h3>Kivisillat, dyynit, kamelit — ja yö ilman telttaa</h3>
+      <p><strong>Aamu:</strong> <strong>Jebel Burdahin kivisilta</strong>. Beduiiniopastettu kalliokiipeily kapeaa kuilua ylös luonnon kivisillalle. Ei köysiä, ei kiipeilykokemusvaatimusta — mutta jännittää juuri sopivasti ja huipulla kävellään sillan yli.</p>
+      <p><strong>Halutessa:</strong> <strong>Jebel Um Adaami</strong>, Jordanian korkein huippu (1 854 m). Huipulta näkyy Saudi-Arabian rajakivi ja aavikko molempiin suuntiin.</p>
+      <p><strong>Iltapäivä:</strong> punaiset dyynit, sandboarding jeepin katolta haetulla laudalla, ja jos porukassa on ratsastustaitoa: <strong>arabialaisilla hevosilla laukkaa</strong> avoimella hiekalla Disin suunnalla. Se päihittää kamelin täysin — kameli on hitaampi ja hauskempi, hevonen on nopea ja vakava.</p>
+      <p><strong>Auringonlasku:</strong> <strong>kamelikaravaani</strong> leiripaikalle. Yö <strong>wild campissa</strong>: patjat suoraan hiekalle, ei telttaa, beduiini tekee tulen ja teetä. Kun tuli sammuu, Linnunrata on suoraan yläpuolella. Ota omat juomat mukaan.</p>
+      <div class="gal">
+        <figure><img src="img/rum-dune.jpg" loading="lazy" alt="Ihmisiä kiipeämässä jyrkkää punaista hiekkadyyniä, jeeppejä alhaalla ja Wadi Rumin kalliot takana"><figcaption>Punainen dyyni — ylös kävellen, alas miten sattuu.</figcaption></figure>
+        <figure><img src="img/rum-night-crop.jpg" loading="lazy" alt="Linnunrata kaartuu tähtitaivaalla valaistun aavikkoleirin yllä Wadi Rumissa"><figcaption>Wadi Rumin yötaivas. Wild campissa ei ole näitäkään valoja.</figcaption></figure>
+      </div>
+      <div class="meta"><span><b>Yö:</b> wild camp aavikolla</span><span><b>Ajoa:</b> ei omaa autoa — beduiini ajaa</span><span><b>Ota:</b> otsalamppu, lämmin takki</span></div>
+    </div>
+  </article>
+
+  <!-- DAY 7 -->
+  <article class="day" id="d7">
+    <figure class="day-fig">
+      <span class="day-num">PÄIVÄ 7–8</span>
+      <img src="img/aqaba-2.jpg" loading="lazy" alt="Palmut siluettina oranssissa auringonlaskussa tyynen veden yllä Aqabassa">
+      <figcaption>Aqaba, Punainenmeri. Reissun viimeinen vaihde.</figcaption>
+    </figure>
+    <div class="day-body">
+      <div class="tags"><span class="tag t-chill">Chill</span><span class="tag t-adv">Seikkailu</span></div>
+      <h3>Punainenmeri: alas pinnan alle, sitten ei mitään</h3>
+      <p>Tunnin ajo aavikolta merelle. Kaksi sukellusta: <strong>vedenalainen sotamuseo</strong> — vuonna 2019 pohjaan lasketut panssarivaunut, rynnäkköpanssarit ja helikopteri hiekalla 15–28 metrissä — ja <strong>Cedar Pride</strong>, kyljellään makaava rahtilaivan hylky vuodelta 1985. Ei-sukeltajat näkevät osan pinnalta snorklaten tai vuokraavat veneen, jossa kapteeni grillaa kalaa kannella.</p>
+      <p>Iltapäivä rannalla, ilta kalaravintolassa. Aqaba on Jordanian rennoin kaupunki ja siellä on oikeita baareja.</p>
+      <p><strong>Päivä 8:</strong> aamusnorklaus, sitten Aqabasta Ammaniin (lento 45 min, tai Desert Highway 4 h) ja kotiin. Suoria paluulentoja Aqabasta Eurooppaan on harvassa — laske Amman-yhteys.</p>
+      <div class="gal">
+        <figure><img src="img/aqaba-coral.jpg" loading="lazy" alt="Värikäs koralliriutta ja parvi oransseja kaloja Punaisellamerellä"><figcaption>Aqabanlahden riutta alkaa muutaman metrin päästä rannasta.</figcaption></figure>
+        <figure><img src="img/camels-rum.jpg" loading="lazy" alt="Kaksi kamelia laiduntamassa punaisella hiekalla suuren kalliojyrkänteen edessä"><figcaption>Takana jäi tämä.</figcaption></figure>
+      </div>
+      <div class="meta"><span><b>Yö:</b> Aqaba</span><span><b>Ajoa:</b> 1 h</span><span><b>Sukellus:</b> n. 55–70 JOD / 2 tankkia</span></div>
+    </div>
+  </article>
+</section>
+
+<section id="valikko">
+  <div class="sec-head">
+    <div class="kicker">Vaihda tai lisää</div>
+    <h2>Eläin- ja trekkivalikko</h2>
+    <p>Koska kamelit, hevoset ja jalkaisin kulkeminen ovat se juttu — tässä paras tarjonta, josta voi vaihtaa yllä olevaan tai venyttää reissua pidemmäksi.</p>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Kokemus</th><th>Kesto</th><th>Miksi</th></tr></thead>
+    <tbody>
+      <tr><td><b>Kamelikaravaani, 2 päivää</b><br>Wadi Rum</td><td>2 pv</td><td>Oikea juttu. Kamelilla syvälle aavikolle, yö nuotiolla, ei jeeppejä lähelläkään. Vaatii yhden lisäyön.</td></tr>
+      <tr><td><b>Jordan Trail: Dana → Petra</b></td><td>4–5 pv</td><td>Lähi-idän hienoin vaellus. Muulit kantavat kamppeet, beduiinikokki mukana, päätepysäkki on Petra takaovesta. Korvaisi puolet reissusta.</td></tr>
+      <tr><td><b>Wadi Ghuweir -kanjoni</b><br>Dana</td><td>1 pv</td><td>18 km vettä, palmuja ja kapeikkoja, käytännössä tyhjä. Vaatii oppaan ja autologistiikan.</td></tr>
+      <tr><td><b>Wadi Ibn Hammad</b><br>Karakin lähellä</td><td>½ pv</td><td>Lämminvetinen kanjoni vesiputouksineen. Nolla turisteja, ei pääsymaksua.</td></tr>
+      <tr><td><b>Hevosvaellus</b><br>Little Petran ympäristö</td><td>½ pv</td><td>Vuoristoa ja kalliohautoja ilman polkuja. Kysy Little Petran majoituksista — tarjonta vaihtelee vuodesta toiseen.</td></tr>
+      <tr><td><b>Jebel Rumin huippu</b><br>Wadi Rum</td><td>1 pv</td><td>Aitoa beduiinikiipeilyä kylän yläpuoliselle massiiville. Vaatii pään kestävän korkeutta.</td></tr>
+      <tr><td><b>Hammamat Afra</b><br>Tafilehin lähellä</td><td>2 h</td><td>Paikallinen, ei-turistinen vaihtoehto Ma'inille. Osuu Karak–Dana-välille.</td></tr>
+      <tr><td><b>Kuumailmapallo</b><br>Wadi Rum</td><td>auringonnousu</td><td>n. 130 JOD. Kaudella loka–huhti, sään mukaan.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="grid g3">
+    <div class="card img-card">
+      <img src="img/ghuweir-siq.jpg" loading="lazy" alt="Kapea oranssi hiekkakivikanjoni, jonka seinät kaartuvat lähes kiinni toisiinsa">
+      <div class="cc"><h4>Wadi Ghuweir</h4><p>Kanjonin kapeikko matkalla Feynaniin. Yksi Jordanian hienoimmista kanjoneista, ja tyhjä.</p></div>
+    </div>
+    <div class="card img-card">
+      <img src="img/ghuweir-oasis.jpg" loading="lazy" alt="Kaksi vaeltajaa kanjonin pohjalla, seinillä palmuja ja tiheää kasvillisuutta">
+      <div class="cc"><h4>Palmut kanjonissa</h4><p>Sama reitti alempana. Vettä riittää ympäri vuoden, siksi kasvillisuus on tällaista.</p></div>
+    </div>
+    <div class="card img-card">
+      <img src="img/hammad-falls.jpg" loading="lazy" alt="Vesi valuu tummaa kanjoniseinää alas kirkkaasti valaistun kalliojyrkänteen vierellä">
+      <div class="cc"><h4>Wadi Ibn Hammad</h4><p>Lämmintä vettä valuu suoraan seinistä. Puolen päivän juttu, jonka löytää harva.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kaytanto">
+  <div class="sec-head">
+    <div class="kicker">Käytännön asiat</div>
+    <h2>Mitä pitää tietää etukäteen</h2>
+  </div>
+  <div class="grid g2">
+    <div class="card">
+      <h4>Jordan Pass — osta ennen lentoa</h4>
+      <p>jordanpass.jo. Explorer-taso (n. 75 JOD) sisältää viisumimaksun ja Petran kahdelle päivälle. Edellyttää vähintään kolmea yötä maassa. <strong>Ei kata</strong> Mujibia eikä Feynania. Tarkista voimassa olevat hinnat ja tasot sivustolta.</p>
+    </div>
+    <div class="card">
+      <h4>Auto ja ajaminen</h4>
+      <p>Tavallinen 2WD riittää kaikkeen — Wadi Rumin sisällä ajaa beduiini omalla autollaan. Vuokraa Ammanista ja palauta Ammaniin; yksisuuntainen Aqabaan maksaa n. 30–50 JOD lisää.</p>
+      <p><strong>Älä aja pimeällä.</strong> Tiet ovat valaisemattomia, hidastetöyssyt merkitsemättömiä ja kameleita liikkuu vapaana. Poliisin checkpointit ovat ystävällisiä — passit käden ulottuvilla.</p>
+    </div>
+    <div class="card">
+      <h4>Varaa nämä ajoissa</h4>
+      <p><strong>Feynan Ecolodge</strong> ja <strong>Mujib Chalets</strong> ovat pieniä ja täyttyvät kaudella — 2–3 kk etuajassa.</p>
+      <p>Wadi Rumin leiri: valitse pieni beduiinivetoinen, ei "luxury dome resort" -tyyppistä. Tarkista tuoreet arviot ja hoida varaus suoraan WhatsAppilla — se on siellä normaali tapa, ei epäilyttävää.</p>
+    </div>
+    <div class="card">
+      <h4>Rahat ja juomat</h4>
+      <p>Valuutta JOD, n. 1,25 €. Beduiinioppaat, leirit, tipit ja pienet kanjonimaksut menevät <strong>käteisellä</strong> — nosta kaupungeissa, aavikolla ei ole automaatteja.</p>
+      <p>Alkoholi: duty free saapuessa (tarkista voimassa oleva tuontiraja). Feynan on alkoholiton eikä sinne saa tuoda. Wadi Rumin leireissä oma pullo on yleensä ok — kysy etukäteen.</p>
+    </div>
+    <div class="card">
+      <h4>Mitä mukaan</h4>
+      <p>Kanjoneihin: vanhat lenkkarit jotka saavat kastua (ei sandaaleja), vesitiivis puhelinpussi, nopeasti kuivuva paita. Trekille: 3 l vettä per henki, aurinkohattu, kepit jos polvet ovat mitä ovat.</p>
+      <p>Aavikolle: otsalamppu ja <strong>lämmin takki</strong> — lokakuun yö Wadi Rumissa menee kymmenen asteen alapuolelle.</p>
+    </div>
+    <div class="card">
+      <h4>Tasapaino, jos haluat rauhallisemman</h4>
+      <p>Tämä runko on n. 55 % seikkailua. Jos haluat siirtää vaakaa lepoon: pudota päivän 5 takaovitrekki lyhyempään Petra-päivään ja lisää toinen yö Aqabaan. Silloin osuus on noin puolet ja puolet.</p>
+    </div>
+  </div>
+</section>
+
+<section id="budjetti">
+  <div class="sec-head">
+    <div class="kicker">Karkea arvio</div>
+    <h2>Budjetti per henkilö</h2>
+    <p>Oletus: 4–6 hengen porukka, auto ja polttoaine jaettuna, keskitason majoitus. Lennot eivät sisälly.</p>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Erä</th><th>€ / hlö</th><th>Sisältää</th></tr></thead>
+    <tbody>
+      <tr><td>Jordan Pass</td><td>~95</td><td>Viisumimaksu + Petra 2 pv + muut kohteet</td></tr>
+      <tr><td>Auto + polttoaine</td><td>~130</td><td>8 päivää jaettuna, Amman–Aqaba–Amman</td></tr>
+      <tr><td>Majoitukset</td><td>~380</td><td>7 yötä, sisältää Feynanin ja leirien ruoat</td></tr>
+      <tr><td>Ruoka ja juoma</td><td>~180</td><td>Ravintolat, kaupat, teet, shisha</td></tr>
+      <tr><td>Aktiviteetit</td><td>~230</td><td>Mujib, beduiinioppaat, jeeppipäivä, kamelit, 2 sukellusta, Petra by Night</td></tr>
+      <tr><td><b>Yhteensä maassa</b></td><td><b>~1 000–1 150</b></td><td>+ lennot Helsingistä n. 350–600 €</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="lista">
+  <div class="sec-head">
+    <div class="kicker">Ennen lähtöä</div>
+    <h2>Varauslista</h2>
+  </div>
+  <ul class="check">
+    <li><b>Lennot Ammaniin</b> — mieluiten loka- tai marraskuu. Tarkista että laskeutuminen ei ole liian myöhään ensimmäisenä iltana.</li>
+    <li><b>Jordan Pass</b> verkosta ennen lentoa. Ilman sitä maksat viisumin erikseen kentällä.</li>
+    <li><b>Feynan Ecolodge</b> — 2–3 kk etuajassa. Kysy samalla auton siirto Danasta.</li>
+    <li><b>Mujib Chalets</b> — pieni paikka, varaa heti kun päivämäärät ovat lukossa.</li>
+    <li><b>Wadi Rumin leiri + beduiiniopas</b> — sovi WhatsAppilla: 2 yötä, Burdah, kamelit auringonlaskuun, wild camp, zarb.</li>
+    <li><b>Petran takaovireitin opas</b> — Little Petran majoituksista tai leirin kautta.</li>
+    <li><b>Aqaban sukellukset</b> — varmista että sotamuseo ja Cedar Pride ovat samassa paketissa.</li>
+    <li><b>Vuokra-auto</b> — Amman in/out, tarkista vakuutuksen omavastuu ja ota kuvat autosta luovutuksessa.</li>
+    <li><b>Petra by Night</b> — tarkista viikonpäivät kun päivämäärä on tiedossa, ja sovita Petra-päivä sen mukaan.</li>
+    <li><b>Matkavakuutus</b> jossa kanjonivaellus ja kalliokiipeily ovat mukana — moni perusvakuutus rajaa nämä ulos.</li>
+  </ul>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <h4>Kuvat</h4>
+    <p style="margin:0 0 .9rem">Kaikki kuvat ovat Wikimedia Commonsista ja jokainen on tarkistettu erikseen, että se esittää mainittua paikkaa. Aqaban vedenalaisesta sotamuseosta ja Cedar Priden hylystä ei löytynyt vapaasti lisensoitua kuvaa, joten niitä ei ole yritetty esittää muulla kuvalla.</p>
+    <div class="credits">
+      <p><a href="https://commons.wikimedia.org/wiki/File:60_Camells_a_la_vall_d%27Um_Ixr%C3%ADn_(Wadi_Ram).jpg">Kamelit Wadi Rumissa</a> — Enric, CC BY-SA 4.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:Roman_Theatre_in_Amman_0188.jpg">Ammanin roomalainen teatteri</a> — Dosseman, CC BY-SA 4.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:18_Wadi_Mujib_Malaqi_Trail_-_Crystal-Clear_Water_-_panoramio.jpg">Wadi Mujibin kanjoni</a> — hikinginjordan, CC BY-SA 3.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:10_Wadi_Mujib_Malaqi_Trail_-_Shallow_Water_You_Do_Not_Need_to_Swim_-_panoramio.jpg">Kahlaajat Wadi Mujibissa</a> — hikinginjordan, CC BY-SA 3.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:Dead_Sea,_Jordanian_Shore.jpg">Kuolleenmeren Jordanian ranta</a> — Alexandermcnabb, CC BY-SA 4.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:Dead_Sea,_Jordan_02.jpg">Suolakerrostumat</a> — Bernard Gagnon, CC BY-SA 3.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:28_Dana_Feynan_Trail_-_View_of_the_Valley_-_panoramio.jpg">Dana–Feynan-reitin laakso</a> — hikinginjordan, CC BY-SA 3.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:25_Dana_Feynan_Trail_-_Trail_Path_-_panoramio.jpg">Danan polku</a> — hikinginjordan, CC BY-SA 3.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:The_Treasury_from_above,_Petra,_Jordan_(34247879312).jpg">Aarrekammio ylhäältä</a> — Carole Raddato, CC BY-SA 2.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:Petra_Siq_08.JPG">Petran Siq</a> — Zairon, CC BY-SA 3.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:Ad-Deir,_Petra,_Jordan.jpg">Ad-Deir</a> — Daniel Case, CC BY-SA 3.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:62_Bedu%C3%AD_dalt_de_camell_a_la_vall_d%27Um_Ixr%C3%ADn_(Wadi_Ram).jpg">Kamelilla Wadi Rumissa</a> — Enric, CC BY-SA 4.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:Camels_-_Wadi_Rum_(12465183844).jpg">Kamelit laiduntamassa</a> — Jorge Láscar, CC BY 2.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:Burdah_Rock_Bridge.jpg">Burdahin kivisilta</a> — Cadouf, CC BY-SA 4.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:2019_Israel_Jordanien_0744_Wadi_Rum_-_Red_Sand_Dune.JPG">Punainen dyyni</a> — Steffen 962, CC BY-SA 4.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:Night_Panorama_in_Wadi_Rum.jpg">Wadi Rumin yötaivas</a> — Faraheed, CC BY-SA 4.0 (rajattu 360°-panoraamasta)</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:2023_(challenge_No._3_-_old_unpublished_pics_)_-_Day_250_-_Palm_reflections_at_sunset,_Aqaba,_Jordan_2008_-_Flickr_-_ambabheg.jpg">Aqaban auringonlasku</a> — Forbes Johnston, CC BY 2.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:Gulf_of_Eilat_(Red_Sea)_coral_reefs.jpg">Aqabanlahden riutta</a> — Daviddarom, public domain. Kuva on Aqabanlahdelta, joka tunnetaan myös Eilatinlahtena — sama vesialue ja sama riutta.</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:15_Wadi_Ghuweir_Trail_to_Feynan_-_In_the_Siq_-_panoramio.jpg">Wadi Ghuweirin kapeikko</a> — hikinginjordan, CC BY-SA 3.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:19_Wadi_Ghuweir_Trail_to_Feynan_-_In_the_Oasis_-_panoramio.jpg">Wadi Ghuweirin palmut</a> — hikinginjordan, CC BY-SA 3.0</p>
+      <p><a href="https://commons.wikimedia.org/wiki/File:15_Wadi_Bin_Hammad_Tropical_Rain_Forest_Trail_-_Waterfalls_-_panoramio.jpg">Wadi Ibn Hammadin vesiputous</a> — hikinginjordan, CC BY-SA 3.0</p>
+    </div>
+    <p class="disc">Hinnat, aukioloajat ja Petra by Nightin viikonpäivät muuttuvat — tarkista ajantasaiset tiedot ennen varauksia. Wadi Mujibin vesireitit sulkeutuvat myös äkillisen tulvariskin takia ilman ennakkoilmoitusta.</p>
+  </div>
+</footer>
+
+</body>
+</html>
