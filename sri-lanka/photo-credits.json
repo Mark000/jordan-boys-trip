@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "id": "hero",
+    "place": "Nine Arch Bridge, Ella",
+    "file": "hero-nine-arch-bridge.jpg",
+    "alt": "A blue train crossing the Nine Arch Bridge at Demodara near Ella, surrounded by jungle and tea slopes",
+    "photographer": "A.Savin",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SL_Demodara_near_Ella_asv2020-01_img02.jpg",
+    "license": "Free Art License",
+    "width": 1600,
+    "height": 1000
+  },
+  {
+    "id": "ella",
+    "place": "Ella Rock",
+    "file": "ella-rock.jpg",
+    "alt": "Ella Rock and the Ella Gap seen from the top of Little Adam's Peak",
+    "photographer": "A.Savin",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SL_Ella_asv2020-01_img26_View_from_Little_Adams_Peak.jpg",
+    "license": "Free Art License",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "id": "train",
+    "place": "Idalgashinna, upcountry line",
+    "file": "train-idalgashinna.jpg",
+    "alt": "A red train at Idalgashinna station on the upcountry line between Haputale and Ohiya",
+    "photographer": "Lasitha sandeepa Kurukula Arachchi",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Srilankan_train.jpg",
+    "license": "CC BY-SA 4.0",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "id": "kitulgala",
+    "place": "Kelani River, Kitulgala",
+    "file": "kitulgala-rafting.jpg",
+    "alt": "A raft running a rapid on the Kelani River at Kitulgala",
+    "photographer": "Pol van den Scheetek…",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kelani_Ganga_Rafting_-_panoramio.jpg",
+    "license": "CC BY 3.0",
+    "width": 1440,
+    "height": 1080
+  },
+  {
+    "id": "arugam",
+    "place": "Arugam Bay",
+    "file": "arugam-bay.jpg",
+    "alt": "Aerial view of the Arugam Bay beach with fishing boats on the sand",
+    "photographer": "Dennis Sylvester Hurd",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Beach_of_Arugam_Bay.jpg",
+    "license": "CC0",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "ahangama",
+    "place": "Koggala stilt fishermen",
+    "file": "koggala-stilt-fishermen.jpg",
+    "alt": "Stilt fishermen at Koggala, the next village west of Ahangama",
+    "photographer": "Jakub Hałun",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fishermen_practicing_traditional_stilt_fishing_near_Galle,_southern_Sri_Lanka,_20260207_1419_9448.jpg",
+    "license": "CC BY 4.0",
+    "width": 1600,
+    "height": 1068
+  },
+  {
+    "id": "udawalawe",
+    "place": "Udawalawe National Park",
+    "file": "udawalawe-elephant.jpg",
+    "alt": "A wild elephant in the scrub of Udawalawe National Park",
+    "photographer": "Prasadtharanga",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Asian_Elephant_in_Udawalawe_National_Park,_Sri_Lanka.jpg",
+    "license": "CC BY-SA 4.0",
+    "width": 1440,
+    "height": 960
+  },
+  {
+    "id": "sigiriya",
+    "place": "Sigiriya from Pidurangala",
+    "file": "sigiriya-from-pidurangala.jpg",
+    "alt": "Sigiriya rock seen from the top of Pidurangala Rock",
+    "photographer": "Gayomiw",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sigiriya_Rock_Fortress_View_from_Pidurangala_Rock.jpg",
+    "license": "CC BY-SA 4.0",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "id": "knuckles",
+    "place": "Knuckles Range",
+    "file": "knuckles-range.jpg",
+    "alt": "The jagged peaks of the Knuckles Range under a clear sky",
+    "photographer": "Astronomyinertia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Knuckles_Range.JPG",
+    "license": "CC BY-SA 3.0",
+    "width": 1600,
+    "height": 1109
+  },
+  {
+    "id": "adams",
+    "place": "Adam's Peak (Sri Pada)",
+    "file": "adams-peak.jpg",
+    "alt": "The cone of Adam's Peak (Sri Pada) rising above the forest, seen from the pilgrim trail",
+    "photographer": "Rehman Abubakr",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Adam%27s_Peak_-_February_2020_(4).jpg",
+    "license": "CC BY-SA 4.0",
+    "width": 1600,
+    "height": 1200
+  }
+]
