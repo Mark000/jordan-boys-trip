@@ -151,7 +151,7 @@ section.block{padding:56px 0 40px}
 .menu .sec-title{color:#fff;text-shadow:3px 3px 0 var(--ink)}
 .menu-row{display:flex;gap:12px;overflow-x:auto;padding:14px 16px 10px;scroll-snap-type:x mandatory;scroll-padding-left:16px;
   max-width:var(--wrap);margin:0 auto;scrollbar-color:var(--saffron) transparent}
-@media (min-width:1000px){.menu-row{flex-wrap:wrap;overflow:visible}}
+@media (min-width:1000px){.menu-row{display:grid;grid-template-columns:repeat(5,1fr);overflow:visible;padding:14px 28px 10px}.dish{flex:none}}
 .dish{flex:0 0 220px;scroll-snap-align:start;background:var(--paper);color:var(--ink);border:3px solid var(--ink);
   border-radius:10px;padding:14px 14px 12px;box-shadow:4px 4px 0 var(--saffron)}
 .dish b{display:block;font-family:var(--display);text-transform:uppercase;font-weight:400;font-size:1.3rem;letter-spacing:.03em;margin-bottom:.2rem}
