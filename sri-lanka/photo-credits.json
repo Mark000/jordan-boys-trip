@@ -46,13 +46,24 @@
   {
     "id": "arugam",
     "place": "Arugam Bay",
-    "file": "arugam-bay.jpg",
-    "alt": "Aerial view of the Arugam Bay beach with fishing boats on the sand",
-    "photographer": "Dennis Sylvester Hurd",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Beach_of_Arugam_Bay.jpg",
-    "license": "CC0",
+    "file": "arugam-bay-boats.jpg",
+    "alt": "Aerial view of fishing boats pulled up on the beach at Arugam Bay",
+    "photographer": "Manuel Campana",
+    "source_url": "https://unsplash.com/photos/AOs7W-ItPM0",
+    "license": "Unsplash License",
     "width": 1600,
     "height": 900
+  },
+  {
+    "id": "hiriketiya",
+    "place": "Hiriketiya",
+    "file": "hiriketiya-sunset.jpg",
+    "alt": "Sunset over the palm-lined horseshoe bay at Hiriketiya",
+    "photographer": "Sören Funk",
+    "source_url": "https://unsplash.com/photos/the-sun-is-setting-over-a-tropical-beach-67aWaECYb_A",
+    "license": "Unsplash License",
+    "width": 1600,
+    "height": 604
   },
   {
     "id": "ahangama",
